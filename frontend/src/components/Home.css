@@ -1,0 +1,262 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #0a0f22;
+    color: #e0e0e0;
+    margin: 20px;
+    padding: 0;
+    margin-top: 0px;
+}
+
+.homeContainer {
+    text-align: center;
+    padding: 20px;
+}
+
+.navbar {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1d2233;
+    padding: 10px 20px;
+    /* position: fixed; */
+    width: calc(100% - 40px); /* Adjusting for body margin */
+    top: 0;
+    z-index: 1000;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+.appName {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #66FCF1;
+    animation: changeRR 1s infinite;
+    
+}
+
+
+
+.animatedRR {
+    position: relative;
+    display: inline-block;
+    transition: transform 0.5s ease-in-out;
+}
+
+.animatedRR:hover {
+    transform: scale(1.1);
+}
+.mirrorI {
+    transform: rotate(90deg);
+}
+.simpleName{
+    color: #ccc;
+    font-size: 1.5rem;
+    padding-left: 2rem;
+}
+.navLinks {
+    display: flex;
+    gap: 20px;
+    margin-right: 40px;
+}
+
+.navLink {
+    color: #66FCF1;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navLink:hover {
+    color: #098692;
+}
+
+.header {
+    margin-top: 80px; 
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    color: #66FCF1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.header p {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin: 20px 0;
+}
+
+.tipsSection {
+    margin: 40px auto;
+    width: 80%;
+    text-align: left;
+}
+
+.tipsSection h2 {
+    font-size: 2rem;
+    color: #56b2bb;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.tipsSection h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 50px;
+    height: 4px;
+    background: #66FCF1;
+}
+
+.tipsSection ul {
+    list-style: none;
+    padding: 0;
+    color: #e0e0e0;
+}
+
+.tipsSection li {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+}
+
+.tipsSection li::before {
+    content: '✔️';
+    margin-right: 10px;
+    color: #66FCF1;
+}
+
+.dashboardLink {
+    margin-top: 20px;
+    display: inline-block;
+    animation: fadeInUp 1s ease-in-out;
+    transition: transform 0.3s, box-shadow 0.3s;
+    
+    
+}
+
+.dashboardLink:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+.dashboardLink .navLink{
+    font-size: 2rem;
+    text-shadow:0 10px 30px #4ea4d5;
+    font-weight: 600;
+}
+
+.footer {
+    background-color: #1d2233;
+    color: #e0e0e0;
+    padding: 20px;
+    
+    width: calc(100% - 40px); /* Adjusting for body margin */
+    bottom: 0;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.2);
+    margin-top: 30px;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    .navLinks {
+        margin-right: 0;
+        margin-top: 0;
+        gap: 10px;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .header p {
+        font-size: 1rem;
+    }
+
+    .tipsSection {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .appName {
+        font-size: 1.5rem;
+    }
+
+    .navLink {
+        font-size: 14px;
+    }
+
+    .header h1 {
+        font-size: 1.8rem;
+    }
+
+    .header p {
+        font-size: 1rem;
+    }
+
+    .tipsSection h2 {
+        font-size: 1.5rem;
+    }
+
+    .tipsSection li {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 5px;
+    }
+
+    .appName {
+        font-size: 1.2rem;
+    }
+
+    .navLink {
+        font-size: 12px;
+    }
+    .simpleName{
+        display: none;
+    }
+    .header h1 {
+        font-size: 1.5rem;
+    }
+
+    .header p {
+        font-size: 0.9rem;
+    }
+
+    .tipsSection h2 {
+        font-size: 1.2rem;
+    }
+
+    .tipsSection li {
+        font-size: 0.9rem;
+    }
+
+    .tipsSection {
+        width: 95%;
+    }
+    .dashboardLink .navLink{
+        font-size: 1.4rem;
+        text-shadow:0 10px 30px #4ea4d5;
+        font-weight: 500;
+    }
+}
